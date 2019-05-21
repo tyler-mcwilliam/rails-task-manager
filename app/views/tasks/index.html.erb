@@ -3,7 +3,9 @@
 <div>
   <ol>
     <% @tasks.each do |task| %>
-      <ul> <input type="checkbox" <%="checked" if task.completed == true%>> <%= link_to task.title, "tasks/#{task.id}" %></ul> <%= link_to "Delete", task_path(task), method: :delete, data: { confirm: "Are you sure?" } %>
+      <ul> <input type="checkbox" <%="checked" if task.completed == true%>> <%= link_to task.title, "tasks/#{task.id}" %>
+        <p><%= link_to "Delete", task_path(task), method: :delete, data: { confirm: "Are you sure?" } %></p>
+      </ul>
     <% end %>
   </ol>
 </div>
