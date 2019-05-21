@@ -1,0 +1,11 @@
+<%= @task.title %>
+<a href='/tasks/<%= @task.id %>/edit'>Edit this task.</a>
+<br>
+<br>
+<div id='details'>
+  <%= @task.details %>
+</div>
+<br>
+<p><input type="checkbox" <%="checked" if @task.completed == true%>>This task is completed.</p>
+<br>
+<a href='/tasks'>Return to Index</a>
